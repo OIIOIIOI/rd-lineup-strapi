@@ -19,6 +19,21 @@
     "number": {
       "type": "string",
       "required": true
+    },
+    "team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::team.team"
+    },
+    "affinities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skater.skater"
+    },
+    "skater_role": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::skater-role.skater-role"
     }
   }
 }

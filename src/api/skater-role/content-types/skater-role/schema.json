@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skater_roles",
+  "info": {
+    "singularName": "skater-role",
+    "pluralName": "skater-roles",
+    "displayName": "SkaterRole"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
