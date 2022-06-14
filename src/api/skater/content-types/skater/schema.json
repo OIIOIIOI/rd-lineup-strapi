@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skaters",
+  "info": {
+    "singularName": "skater",
+    "pluralName": "skaters",
+    "displayName": "Skater",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
