@@ -4,7 +4,8 @@
   "info": {
     "singularName": "skater-role",
     "pluralName": "skater-roles",
-    "displayName": "SkaterRole"
+    "displayName": "SkaterRole",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -20,6 +21,12 @@
       "relation": "oneToMany",
       "target": "api::skater.skater",
       "mappedBy": "skater_role"
+    },
+    "order": {
+      "type": "integer",
+      "unique": true,
+      "required": true,
+      "default": 0
     }
   }
 }
