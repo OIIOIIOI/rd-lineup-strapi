@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jams",
+  "info": {
+    "singularName": "jam",
+    "pluralName": "jams",
+    "displayName": "Jam",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "integer",
+      "default": 1,
+      "min": 1,
+      "required": true
+    },
+    "game": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::game.game",
+      "inversedBy": "jams"
+    },
+    "skaters": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::skater.skater",
+      "mappedBy": "jams"
+    },
+    "jammer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::skater.skater"
+    },
+    "pivot": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::skater.skater"
+    }
+  }
+}

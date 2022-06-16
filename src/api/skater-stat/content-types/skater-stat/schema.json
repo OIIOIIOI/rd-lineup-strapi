@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "player_stats",
+  "collectionName": "skater_stats",
   "info": {
-    "singularName": "player-stat",
-    "pluralName": "player-stats",
-    "displayName": "PlayerStat",
-    "description": ""
+    "singularName": "skater-stat",
+    "pluralName": "skater-stats",
+    "displayName": "SkaterStat"
   },
   "options": {
     "draftAndPublish": false
@@ -14,17 +13,18 @@
   "attributes": {
     "game": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::game.game"
+      "relation": "manyToOne",
+      "target": "api::game.game",
+      "inversedBy": "skater_stats"
     },
     "skater": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::skater.skater"
+      "relation": "manyToOne",
+      "target": "api::skater.skater",
+      "inversedBy": "skater_stats"
     },
     "jams": {
       "type": "integer",
-      "default": 0,
       "min": 0
     },
     "penalties": {

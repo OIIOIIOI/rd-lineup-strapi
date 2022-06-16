@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * player-stat service.
+ * jam service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::player-stat.player-stat');
+module.exports = createCoreService('api::jam.jam');

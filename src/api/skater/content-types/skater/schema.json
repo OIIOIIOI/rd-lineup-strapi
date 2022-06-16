@@ -22,8 +22,9 @@
     },
     "team": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::team.team"
+      "relation": "manyToOne",
+      "target": "api::team.team",
+      "inversedBy": "skaters"
     },
     "affinities": {
       "type": "relation",
@@ -32,8 +33,21 @@
     },
     "skater_role": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::skater-role.skater-role"
+      "relation": "manyToOne",
+      "target": "api::skater-role.skater-role",
+      "inversedBy": "skaters"
+    },
+    "skater_stats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skater-stat.skater-stat",
+      "mappedBy": "skater"
+    },
+    "jams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::jam.jam",
+      "inversedBy": "skaters"
     }
   }
 }

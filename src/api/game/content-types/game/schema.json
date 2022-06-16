@@ -20,6 +20,18 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::team.team"
+    },
+    "jams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::jam.jam",
+      "mappedBy": "game"
+    },
+    "skater_stats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skater-stat.skater-stat",
+      "mappedBy": "game"
     }
   }
 }

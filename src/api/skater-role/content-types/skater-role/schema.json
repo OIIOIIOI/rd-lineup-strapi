@@ -14,6 +14,12 @@
     "name": {
       "type": "string",
       "required": true
+    },
+    "skaters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skater.skater",
+      "mappedBy": "skater_role"
     }
   }
 }
