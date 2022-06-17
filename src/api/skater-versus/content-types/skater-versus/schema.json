@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skater_versuses",
+  "info": {
+    "singularName": "skater-versus",
+    "pluralName": "skater-versuses",
+    "displayName": "SkaterVersus"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "score": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "game": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::game.game",
+      "inversedBy": "skater_versuses"
+    },
+    "jammer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::skater.skater"
+    },
+    "blocker": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::game.game"
+    }
+  }
+}

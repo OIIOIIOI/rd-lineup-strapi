@@ -32,6 +32,12 @@
       "relation": "oneToMany",
       "target": "api::skater-stat.skater-stat",
       "mappedBy": "game"
+    },
+    "skater_versuses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skater-versus.skater-versus",
+      "mappedBy": "game"
     }
   }
 }
